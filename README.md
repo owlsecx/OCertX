@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Parse and inspect X.509 certificates,
+OCertX is an X.509 certificate inspector for PKI and TLS work, parsing certificates from files or live SSL/TLS connections. It inspects certificate chains, expiry, fingerprints and hostname matches, decodes PEM/DER and CSRs, checks OCSP revocation and generates SPKI pins. Certificates can be compared, converted, bundle-split and exported, with JSON/CSV output.
 
 ---
 
 ## ✨ Features
 
-- X.509 Certificate Inspector (TLS/PKI Analysis)
+- Parse and inspect X.509 certificates from PEM/DER files
+- Live SSL/TLS connection and certificate-chain analysis
+- Expiry monitoring, fingerprint verification and hostname matching
+- OCSP revocation checks and SPKI pin generation
+- PEM/DER decode/convert, bundle split and certificate compare
+- JSON / CSV export (full field parsing with optional cryptography library)
 
 ---
 
@@ -38,7 +43,10 @@ Parse and inspect X.509 certificates,
 ## 🚀 Usage
 
 ```bash
-./OCertX
+./OCertX --host example.com
+./OCertX --host example.com --port 8443
+./OCertX --file server.pem
+./OCertX --help
 ```
 
 ---
